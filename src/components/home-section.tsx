@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Sparkles } from 'lucide-react';
 
@@ -11,14 +10,9 @@ export function HomeSection({ onContactClick }: HomeSectionProps) {
     <section id="home" className="py-16 md:py-24 bg-gradient-to-br from-background to-secondary/30 rounded-xl shadow-lg overflow-hidden animate-fadeIn section-mb">
       <div className="container mx-auto px-4 text-center">
         <div className="relative mb-12 group">
-          <Image
-            src="https://placehold.co/1200x400.png"
-            alt="Abstract Banner Background"
-            width={1200}
-            height={400}
-            className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
-            data-ai-hint="abstract design"
-          />
+          <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-15 transition-opacity duration-500 overflow-hidden -z-10">
+            <Sparkles className="h-64 w-64 md:h-96 md:w-96 text-primary/50 animate-[pulse_3s_ease-in-out_infinite]" />
+          </div>
           <div className="relative py-16 md:py-24">
             <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-primary animate-fadeIn" style={{ animationDelay: '0.2s' }}>
               <span className="block">Dankhara Abhi</span>
@@ -28,11 +22,11 @@ export function HomeSection({ onContactClick }: HomeSectionProps) {
             </p>
             <Button
               size="lg"
-              className="font-headline text-xl animate-fadeIn shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+              className="font-headline text-xl animate-fadeIn shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group/button"
               onClick={onContactClick}
               style={{ animationDelay: '0.6s' }}
             >
-              Connect With Me <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+              Connect With Me <ChevronRight className="ml-2 h-6 w-6 group-hover/button:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
         </div>

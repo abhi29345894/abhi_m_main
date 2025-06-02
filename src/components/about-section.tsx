@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { UserCircle2, Briefcase } from "lucide-react";
-import Image from "next/image";
+import { UserCircle2, Briefcase, Sparkles } from "lucide-react";
 
 export function AboutSection() {
   return (
@@ -15,14 +14,10 @@ export function AboutSection() {
           </CardHeader>
           <CardContent className="p-8 grid md:grid-cols-3 gap-8 items-center">
             <div className="md:col-span-1 flex justify-center">
-              <Image 
-                src="https://placehold.co/300x300.png" // Placeholder for profile photo
-                alt="Dankhara Abhi"
-                width={250}
-                height={250}
-                className="rounded-full shadow-lg border-4 border-secondary"
-                data-ai-hint="profile photo"
-              />
+              <div className="flex flex-col items-center justify-center h-[250px] w-[250px] bg-primary/10 rounded-full shadow-lg border-4 border-secondary p-6 group transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50">
+                <Sparkles className="h-24 w-24 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse" />
+                <p className="mt-4 font-headline text-xl text-primary transition-opacity duration-300 group-hover:opacity-80">Abhi Connect</p>
+              </div>
             </div>
             <div className="md:col-span-2 space-y-6">
               <p className="text-lg text-foreground/90 leading-relaxed">
