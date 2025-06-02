@@ -1,24 +1,46 @@
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Sparkles } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ChevronRight, Sparkles, Palette, Orbit, LifeBuoy } from 'lucide-react';
 
 interface HomeSectionProps {
   onContactClick: () => void;
 }
 
+const services = [
+  {
+    icon: <Palette className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />,
+    title: "Graphic Design",
+    description: "Crafting stunning visuals that tell your story and captivate your audience.",
+    delay: "0.8s",
+  },
+  {
+    icon: <Orbit className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />,
+    title: "Web Animations",
+    description: "Bringing your website to life with smooth, interactive, and engaging animations.",
+    delay: "1.0s",
+  },
+  {
+    icon: <LifeBuoy className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />,
+    title: "Digital Assistance",
+    description: "Providing comprehensive support for your digital needs and projects.",
+    delay: "1.2s",
+  },
+];
+
 export function HomeSection({ onContactClick }: HomeSectionProps) {
   return (
-    <section id="home" className="py-16 md:py-24 bg-gradient-to-br from-background to-secondary/30 rounded-xl shadow-lg overflow-hidden animate-fadeIn section-mb">
+    <section id="home" className="py-24 md:py-32 bg-gradient-to-br from-background to-secondary/30 rounded-xl shadow-2xl overflow-hidden animate-fadeIn section-mb">
       <div className="container mx-auto px-4 text-center">
-        <div className="relative mb-12 group">
+        <div className="relative mb-16 group">
           <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-15 transition-opacity duration-500 overflow-hidden -z-10">
-            <Sparkles className="h-64 w-64 md:h-96 md:w-96 text-primary/50 animate-[pulse_3s_ease-in-out_infinite]" />
+            <Sparkles className="h-72 w-72 md:h-96 md:w-96 text-primary/50 animate-pulseSlow" />
           </div>
           <div className="relative py-16 md:py-24">
             <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-primary animate-fadeIn" style={{ animationDelay: '0.2s' }}>
               <span className="block">Dankhara Abhi</span>
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl mx-auto animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-              Welcome to my personal connect platform. Let&apos;s build something amazing together!
+            <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-3xl mx-auto animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+              Welcome to my personal connect platform. I specialize in creating unique digital experiences. Let&apos;s build something amazing together!
             </p>
             <Button
               size="lg"
@@ -31,14 +53,25 @@ export function HomeSection({ onContactClick }: HomeSectionProps) {
           </div>
         </div>
         
-        <div className="mt-12 p-6 bg-card rounded-lg shadow-md animate-fadeIn" style={{ animationDelay: '0.8s' }}>
-          <div className="flex items-center justify-center mb-3 text-accent">
-            <Sparkles className="w-8 h-8 mr-2" />
-            <h3 className="font-headline text-2xl">My Core Services</h3>
+        <div className="mt-16 animate-fadeIn" style={{ animationDelay: '0.7s' }}>
+          <h2 className="font-headline text-3xl md:text-4xl text-accent mb-12 text-center">My Core Services</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card 
+                key={index} 
+                className="bg-card/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-1 animate-slideInUp"
+                style={{ animationDelay: service.delay }}
+              >
+                <CardHeader className="items-center text-center">
+                  {service.icon}
+                  <CardTitle className="font-headline text-2xl text-primary">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            I specialize in graphic design, web animations, and digital assistance to bring your ideas to life.
-          </p>
         </div>
 
       </div>
