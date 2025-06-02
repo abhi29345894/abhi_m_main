@@ -27,7 +27,7 @@ export function AboutSection() {
               </div>
             </div>
             <div className="md:col-span-2 space-y-6 md:space-y-8">
-              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed animate-slideInUp" style={{animationDelay: '0.6s'}}>
+              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed animate-slideInUp break-words" style={{animationDelay: '0.6s'}}>
                 Hello! I&apos;m Dankhara Abhi, a passionate individual dedicated to providing high-quality digital services. My goal is to help you connect, create, and succeed in the digital world.
               </p>
               <div className="space-y-6">
@@ -38,19 +38,19 @@ export function AboutSection() {
                       <h4 className="font-headline text-xl md:text-2xl text-accent mb-2">My Services</h4>
                       <ul className="space-y-2">
                         {servicesList.map((service, index) => (
-                           <li key={index} className="flex items-center space-x-3 text-foreground/80 animate-slideInUp" style={{ animationDelay: `${1 + index * 0.2}s` }}>
+                           <li key={index} className="flex items-center space-x-3 text-foreground/80 animate-slideInUp break-words" style={{ animationDelay: `${1 + index * 0.2}s` }}>
                             {service.icon}
                             <span>{service.text}</span>
                           </li>
                         ))}
                       </ul>
-                      <p className="text-foreground/80 mt-3 animate-slideInUp" style={{ animationDelay: `${1 + servicesList.length * 0.2}s` }}>
+                      <p className="text-foreground/80 mt-3 animate-slideInUp break-words" style={{ animationDelay: `${1 + servicesList.length * 0.2}s` }}>
                          Whether you need a stunning visual for your brand or technical help to get your project off the ground, I&apos;m here to support you.
                       </p>
                     </div>
                   </div>
                 </div>
-                <blockquote className="border-l-4 border-primary pl-4 py-2 italic text-foreground/70 bg-secondary/10 rounded-r-md animate-slideInUp hover:shadow-md transition-shadow" style={{animationDelay: `${1.2 + servicesList.length * 0.2}s`}}>
+                <blockquote className="border-l-4 border-primary pl-4 py-2 italic text-foreground/70 bg-secondary/10 rounded-r-md animate-slideInUp hover:shadow-md transition-shadow break-words" style={{animationDelay: `${1.2 + servicesList.length * 0.2}s`}}>
                   &quot;Dankhara Abhi ek personal connect service platform chhe jethi tame saral rite mane message kari shako, rating aapi shako ane contact ma rahi shako. Hu sav thi ochha daam ma graphic, animation, ane digital help provide karu chu. Tamne koi help joiye? Toh message kari ne vato karie!&quot;
                 </blockquote>
               </div>

@@ -82,7 +82,7 @@ export function PackagesSection() {
               <CardContent className="flex-grow">
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-foreground/80">
+                    <li key={index} className="flex items-center text-foreground/80 break-words">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0" />
                       {feature}
                     </li>
