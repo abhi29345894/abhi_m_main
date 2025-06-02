@@ -33,6 +33,7 @@ export function HomeSection({ onContactClick }: HomeSectionProps) {
       <div className="container mx-auto px-4 text-center">
         <div className="relative mb-16 group">
           <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-15 transition-opacity duration-500 overflow-hidden -z-10">
+            {/* Placeholder for Lottie Animation - Sparkles icon used for now */}
             <Sparkles className="h-72 w-72 md:h-96 md:w-96 text-primary/50 animate-pulseSlow" />
           </div>
           <div className="relative py-16 md:py-24">
@@ -40,7 +41,7 @@ export function HomeSection({ onContactClick }: HomeSectionProps) {
               <span className="block">Dankhara Abhi</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-3xl mx-auto animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-              Welcome to my personal connect platform. I specialize in creating unique digital experiences. Let&apos;s build something amazing together!
+              Affordable 3D & Animated Websites
             </p>
             <Button
               size="lg"
